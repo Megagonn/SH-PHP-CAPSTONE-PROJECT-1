@@ -11,24 +11,28 @@
 
 <body>
 <h1>Chess Board</h1>
-    <table border="1px" class="table table-border mx-auto my-auto" style="width: 400px; height: 400px;">
+    <table border="1px" class="table table-bordered mx-auto my-auto" style="width: 400px; height: 400px;">
         <?php
         $_chess_box_count = 8;
         $chess_box = '';
         $chess_row = '';
         $alt_color = true;
         for ($i = 1; $i <= $_chess_box_count; $i++) {
-            if ($i%2 == 0) {
-                $chess_box = "<td class='bg-secondary' style='width: 30px; height: 30px;'>".$chess_box."</td>";
-            }
-            else{
-                $chess_box = "<td style='width: 30px; height: 30px;'>".$chess_box."</td>";
-            }
-        }
-        for ($i = 0; $i < $_chess_box_count; $i++) {
+            $chess_box = "<td style='width: 30px; height: 30px;'></td>".$chess_box."";
+            // if ($i%2 == 0) {
+            // }
+            // else{
+            //     $chess_box = "<td style='width: 30px; height: 30px;'></td>".$chess_box."";
+            // }
+            for ($j = 0; $j < $i; $j++) {
             $chess_row = "<tr>" . $chess_box . "</tr>";
-            echo $chess_row;
+            }
         }
+        echo $chess_row;
+        // for ($i = 0; $i < $_chess_box_count; $i++) {
+        //     $chess_row = "<tr>" . $chess_box . "</tr>";
+        //     echo $chess_row;
+        // }
         ?>
     </table>
 </body>
