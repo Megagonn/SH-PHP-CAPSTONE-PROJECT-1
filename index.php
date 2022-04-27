@@ -18,7 +18,7 @@
         $chess_row = '';
         $alt_color = true;
         for ($i = 1; $i <= $_chess_box_count; $i++) {
-            $chess_box = "<td style='width: 30px; height: 30px;'></td>".$chess_box."";
+            $chess_box = "<td style='width: 30px; height: 30px;'>".$i."</td>".$chess_box."";
             // if ($i%2 == 0) {
             // }
             // else{
